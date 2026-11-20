@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Проверка на телефонах</title>
+<style>
+  body { margin: 0; padding: 20px; background: #1b1e26; color: #ccc; font: 12px system-ui; }
+  .row { display: flex; gap: 24px; align-items: flex-start; overflow-x: auto; padding-bottom: 20px; }
+  figure { margin: 0; flex: none; }
+  figcaption { margin-bottom: 6px; }
+  iframe { border: 1px solid #444; background: #000; display: block; }
+</style>
+</head>
+<body>
+<div class="row" id="row"></div>
+<script>
+  // Стандартные размеры телефонов (CSS-пиксели)
+  const devices = [
+    ['iPhone SE (1st) / Fold', 320, 568],
+    ['Galaxy S / Android', 360, 780],
+    ['iPhone SE / 8 / mini', 375, 667],
+    ['iPhone 12–14', 390, 844],
+    ['iPhone 15/16, Pixel', 393, 852],
+    ['iPhone 16 Pro', 402, 874],
+    ['Pixel / Galaxy Plus', 412, 915],
+    ['iPhone 11 / XR / Plus', 414, 896],
+    ['iPhone 14 Pro Max', 428, 926],
+    ['iPhone 15/16 Plus·Max', 430, 932],
+    ['iPhone 16 Pro Max', 440, 956],
+    ['Landscape iPhone', 844, 390],
+    ['Landscape SE', 667, 375],
+  ];
+  const row = document.getElementById('row');
+  const path = new URLSearchParams(location.search).get('p') || '/';
+  devices.forEach(([name, w, h]) => {
+    const f = document.createElement('figure');
+    f.innerHTML = `<figcaption>${name} — ${w}×${h}</figcaption><iframe src="${path}" width="${w}" height="${h}"></iframe>`;
+    row.appendChild(f);
+  });
+</script>
+</body>
+</html>

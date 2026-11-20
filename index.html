@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07090f">
+  <title>Монтаж и моушн-дизайн — портфолио</title>
+  <meta name="description" content="Портфолио монтажёра и моушн-дизайнера: видеомонтаж, моушн-графика, реклама и Reels.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Тонкая верхняя полоска -->
+  <div class="topbar">
+    <span><i class="dot"></i>Открыт для новых проектов</span>
+    <span class="topbar__right">Монтаж · Моушн · 2026</span>
+  </div>
+
+  <!-- Навигация: ссылки слева, логотип по центру, ссылки справа -->
+  <header class="nav" id="nav">
+    <nav class="nav__group nav__group--left" aria-label="Основное меню">
+      <a href="#about" class="nav__link">Обо мне</a>
+      <a href="#portfolio" class="nav__link">Портфолио</a>
+    </nav>
+
+    <a href="#top" class="logo" aria-label="На главную">
+      <span class="logo__mark">N</span><span class="logo__text">NAME</span>
+    </a>
+
+    <nav class="nav__group nav__group--right" aria-label="Контакты и цены">
+      <a href="#socials" class="nav__link">Соц сети</a>
+      <a href="#prices" class="nav__link">Прайс лист</a>
+    </nav>
+
+    <button type="button" class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Мобильное меню">
+    <a href="#about">Обо мне</a>
+    <a href="#portfolio">Портфолио</a>
+    <a href="#socials">Соц сети</a>
+    <a href="#prices">Прайс лист</a>
+  </nav>
+
+  <!-- Боковой индикатор секций -->
+  <nav class="side-index" aria-label="Разделы страницы">
+    <a href="#about" data-sec="about">01</a>
+    <a href="#portfolio" data-sec="portfolio">02</a>
+    <a href="#socials" data-sec="socials">03</a>
+    <a href="#prices" data-sec="prices">04</a>
+  </nav>
+
+  <main id="top">
+
+    <!-- ============ HERO (временный) ============ -->
+    <section class="hero">
+      <p class="hero__tag">Монтаж,<br>который держит<br>внимание.</p>
+
+      <h1 class="hero__title"><span class="sr-only">Motion — монтаж и моушн-дизайн</span>
+        <span class="hero__word" aria-hidden="true">MO</span>
+        <span class="hero__frame" aria-hidden="true">
+          <span class="frame__corner frame__corner--tl"></span>
+          <span class="frame__corner frame__corner--tr"></span>
+          <span class="frame__corner frame__corner--bl"></span>
+          <span class="frame__corner frame__corner--br"></span>
+          <span class="frame__rec"><i></i>REC</span>
+          <span class="frame__play" aria-hidden="true"></span>
+          <span class="frame__tc" id="timecode">00:00:00:00</span>
+          <span class="frame__timeline"><i></i></span>
+        </span>
+        <span class="hero__word" aria-hidden="true">TION</span>
+      </h1>
+
+      <div class="hero__bottom">
+        <div class="hero__actions">
+          <a href="#portfolio" class="btn btn--accent">Смотреть работы</a>
+          <a href="#socials" class="btn btn--line">Связаться</a>
+        </div>
+        <p class="hero__meta">Видеомонтаж<br>Моушн-дизайн<br>с 2021</p>
+      </div>
+    </section>
+
+    <!-- ============ ОБО МНЕ ============ -->
+    <section class="section" id="about">
+      <div class="section__head reveal">
+        <span class="section__num">01</span>
+        <span class="section__label">Обо мне</span>
+      </div>
+
+      <div class="about">
+        <h2 class="about__lead reveal">
+          Я монтирую видео и делаю моушн-графику — от коротких Reels до рекламных роликов.
+          <span class="muted">Главное для меня — ритм, чистая подача и чтобы ролик досматривали до конца.</span>
+        </h2>
+
+        <div class="about__side reveal">
+          <p>
+            Здесь будет пара абзацев о тебе: откуда пришёл в монтаж, с какими проектами работаешь,
+            что любишь делать больше всего. Текст временный — заменим, когда пришлёшь свой.
+          </p>
+
+          <ul class="stats">
+            <li><b>5+</b><span>лет в монтаже</span></li>
+            <li><b>200+</b><span>роликов сдано</span></li>
+            <li><b>40+</b><span>клиентов</span></li>
+          </ul>
+
+          <div class="tools">
+            <span>Premiere Pro</span>
+            <span>After Effects</span>
+            <span>DaVinci Resolve</span>
+            <span>Cinema 4D</span>
+            <span>Figma</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ПОРТФОЛИО ============ -->
+    <section class="section" id="portfolio">
+      <div class="section__head reveal">
+        <span class="section__num">02</span>
+        <span class="section__label">Портфолио</span>
+        <div class="filters" role="tablist">
+          <button type="button" class="filter is-active" data-filter="all">Все</button>
+          <button type="button" class="filter" data-filter="edit">Монтаж</button>
+          <button type="button" class="filter" data-filter="motion">Моушн</button>
+          <button type="button" class="filter" data-filter="ads">Реклама</button>
+        </div>
+      </div>
+
+      <div class="grid">
+        <article class="card card--wide reveal" data-cat="motion">
+          <div class="card__media" style="--a:#1d3b8f;--b:#0b1020"><span class="card__play"></span><span class="card__dur">01:12</span></div>
+          <div class="card__info"><h3>Шоурил 2026</h3><span>Моушн · Монтаж</span></div>
+        </article>
+        <article class="card reveal" data-cat="ads">
+          <div class="card__media" style="--a:#c56a12;--b:#120c08"><span class="card__play"></span><span class="card__dur">00:30</span></div>
+          <div class="card__info"><h3>Рекламный ролик бренда</h3><span>Реклама</span></div>
+        </article>
+        <article class="card reveal" data-cat="edit">
+          <div class="card__media" style="--a:#2b2f3a;--b:#0b0d12"><span class="card__play"></span><span class="card__dur">12:40</span></div>
+          <div class="card__info"><h3>Монтаж YouTube-выпуска</h3><span>Монтаж</span></div>
+        </article>
+        <article class="card reveal" data-cat="motion">
+          <div class="card__media" style="--a:#2f6bff;--b:#0a0f22"><span class="card__play"></span><span class="card__dur">00:15</span></div>
+          <div class="card__info"><h3>Анимация логотипа</h3><span>Моушн</span></div>
+        </article>
+        <article class="card reveal" data-cat="edit">
+          <div class="card__media" style="--a:#5a4a3a;--b:#0e0c0a"><span class="card__play"></span><span class="card__dur">00:45</span></div>
+          <div class="card__info"><h3>Серия Reels для эксперта</h3><span>Монтаж · Reels</span></div>
+        </article>
+        <article class="card reveal" data-cat="motion">
+          <div class="card__media" style="--a:#3a4a7a;--b:#0a0c14"><span class="card__play"></span><span class="card__dur">00:20</span></div>
+          <div class="card__info"><h3>Кинетическая типографика</h3><span>Моушн</span></div>
+        </article>
+        <article class="card card--wide reveal" data-cat="ads">
+          <div class="card__media" style="--a:#f2962b;--b:#1a1f3a"><span class="card__play"></span><span class="card__dur">00:59</span></div>
+          <div class="card__info"><h3>Промо онлайн-курса</h3><span>Реклама · Моушн</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ СОЦ СЕТИ ============ -->
+    <section class="section" id="socials">
+      <div class="section__head reveal">
+        <span class="section__num">03</span>
+        <span class="section__label">Соц сети</span>
+      </div>
+
+      <ul class="socials">
+        <li class="reveal"><a href="#" target="_blank" rel="noopener"><span class="socials__name">Telegram</span><span class="socials__handle">@username</span><span class="socials__arrow">↗</span></a></li>
+        <li class="reveal"><a href="#" target="_blank" rel="noopener"><span class="socials__name">Instagram</span><span class="socials__handle">@username</span><span class="socials__arrow">↗</span></a></li>
+        <li class="reveal"><a href="#" target="_blank" rel="noopener"><span class="socials__name">YouTube</span><span class="socials__handle">@channel</span><span class="socials__arrow">↗</span></a></li>
+        <li class="reveal"><a href="#" target="_blank" rel="noopener"><span class="socials__name">Behance</span><span class="socials__handle">/username</span><span class="socials__arrow">↗</span></a></li>
+        <li class="reveal"><a href="#" target="_blank" rel="noopener"><span class="socials__name">ВКонтакте</span><span class="socials__handle">/username</span><span class="socials__arrow">↗</span></a></li>
+      </ul>
+    </section>
+
+    <!-- ============ ПРАЙС ЛИСТ ============ -->
+    <section class="section" id="prices">
+      <div class="section__head reveal">
+        <span class="section__num">04</span>
+        <span class="section__label">Прайс лист</span>
+      </div>
+
+      <div class="prices">
+        <div class="price reveal">
+          <span class="price__num">01</span>
+          <div class="price__body"><h3>Reels / Shorts</h3><p>Вертикальный ролик до 60 сек: джамп-каты, субтитры, музыка, SFX.</p></div>
+          <span class="price__cost">от 2 500 ₽</span>
+        </div>
+        <div class="price reveal">
+          <span class="price__num">02</span>
+          <div class="price__body"><h3>Монтаж YouTube-видео</h3><p>Ролик до 20 минут: структура, вставки, цветокор, звук.</p></div>
+          <span class="price__cost">от 6 000 ₽</span>
+        </div>
+        <div class="price reveal">
+          <span class="price__num">03</span>
+          <div class="price__body"><h3>Рекламный ролик</h3><p>Видео для таргета под задачу: сценарий хука, анимации, адаптации форматов.</p></div>
+          <span class="price__cost">от 8 000 ₽</span>
+        </div>
+        <div class="price reveal">
+          <span class="price__num">04</span>
+          <div class="price__body"><h3>Моушн-графика</h3><p>Анимация логотипа, инфографика, титры, интро и аутро.</p></div>
+          <span class="price__cost">от 5 000 ₽</span>
+        </div>
+        <div class="price price--accent reveal">
+          <span class="price__num">05</span>
+          <div class="price__body"><h3>Свой проект</h3><p>Нестандартная задача или серия роликов — обсудим и посчитаем отдельно.</p></div>
+          <a href="#socials" class="price__cost price__cost--link">Обсудить →</a>
+        </div>
+      </div>
+      <p class="prices__note reveal">Цены ориентировочные — точная стоимость зависит от объёма исходников и сроков.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 NAME</span>
+    <a href="#top">Наверх ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

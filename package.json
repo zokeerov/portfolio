@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint:html": "html-validate index.html",
+    "lint:css": "stylelint \"**/*.css\" --ignore-path .gitignore",
+    "lint:js": "node --check script.js",
+    "check": "node scripts/check-site.mjs",
+    "test": "npm run lint:html && npm run lint:css && npm run lint:js && npm run check",
+    "build": "node scripts/build.mjs",
+    "dev": "python -m http.server 5500 --bind 127.0.0.1"
+  },
+  "devDependencies": {
+    "html-validate": "8.18.2",
+    "stylelint": "16.10.0",
+    "stylelint-config-standard": "36.0.1"
+  }
+}
